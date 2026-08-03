@@ -78,7 +78,7 @@ export const services: Service[] = [
   short: 'Supporting marriages of very poor girls from all religions.',
   description:
     'AGWAY Future Foundation supports the marriage of very poor girls from all religions by providing assistance and support for a dignified new beginning. Our aim is to bring happiness, respect and hope to families who need support.',
-  image: '/service-sarv dharm samuhik vivah.png',
+  image: '/service-marriage.jpeg',
 },
 ]
 
