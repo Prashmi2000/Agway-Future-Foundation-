@@ -73,13 +73,13 @@ export const services: Service[] = [
     image: '/service-eldercare.png',
   },
     {
-    slug: 'samuhik-vivah',
-    title: 'Samuhik Vivah & Kanya Sahayata',
-    short: 'Support for marriages of underprivileged girls from all communities.',
-    description:
-      'AGWAY Future Foundation supports the marriage of underprivileged girls by providing necessary assistance, respect and support. This initiative is open for daughters from all communities, helping families celebrate marriages with dignity and happiness.',
-    image: '/service-education.png',
-  },
+  slug: 'all-religion-marriage',
+  title: 'All Religion Marriage',
+  short: 'Supporting marriages of very poor girls from all religions.',
+  description:
+    'AGWAY Future Foundation supports the marriage of very poor girls from all religions by providing assistance and support for a dignified new beginning. Our aim is to bring happiness, respect and hope to families who need support.',
+  image: '/service-sarv dharm samuhik vivah.png',
+},
 ]
 
 export const stats = [
