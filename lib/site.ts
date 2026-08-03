@@ -72,6 +72,14 @@ export const services: Service[] = [
       'We care for the elderly with regular check-ins, health support, companionship and community activities so our seniors live with dignity and joy.',
     image: '/service-eldercare.png',
   },
+    {
+    slug: 'samuhik-vivah',
+    title: 'Samuhik Vivah & Kanya Sahayata',
+    short: 'Support for marriages of underprivileged girls from all communities.',
+    description:
+      'AGWAY Future Foundation supports the marriage of underprivileged girls by providing necessary assistance, respect and support. This initiative is open for daughters from all communities, helping families celebrate marriages with dignity and happiness.',
+    image: '/service-education.png',
+  },
 ]
 
 export const stats = [
