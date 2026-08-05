@@ -53,7 +53,7 @@ export default function DonatePage() {
       } else {
         alert("Something went wrong. Please try again.");
       }
-    } catch (error) {
+    } catch {
       alert("Server error. Please try again.");
     } finally {
       setLoading(false);
@@ -75,9 +75,9 @@ export default function DonatePage() {
 
         <DonateOptions />
 
-        <div className="mt-10 rounded-3xl bg-white shadow-lg border p-8">
+        <div className="mt-10 rounded-3xl bg-black shadow-xl border border-gray-700 p-8">
 
-          <h2 className="text-2xl font-semibold mb-6">
+          <h2 className="text-2xl font-semibold mb-6 text-white">
             Donor Details
           </h2>
 
@@ -86,7 +86,7 @@ export default function DonatePage() {
             <input
               type="text"
               placeholder="Full Name *"
-              className="w-full border rounded-xl p-3"
+              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white placeholder-gray-400"
               value={form.name}
               onChange={(e) =>
                 setForm({ ...form, name: e.target.value })
@@ -96,7 +96,7 @@ export default function DonatePage() {
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full border rounded-xl p-3"
+              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white placeholder-gray-400"
               value={form.email}
               onChange={(e) =>
                 setForm({ ...form, email: e.target.value })
@@ -106,7 +106,7 @@ export default function DonatePage() {
             <input
               type="tel"
               placeholder="Mobile Number *"
-              className="w-full border rounded-xl p-3"
+              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white placeholder-gray-400"
               value={form.phone}
               onChange={(e) =>
                 setForm({ ...form, phone: e.target.value })
@@ -114,7 +114,7 @@ export default function DonatePage() {
             />
 
             <select
-              className="w-full border rounded-xl p-3"
+              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white"
               value={form.category}
               onChange={(e) =>
                 setForm({ ...form, category: e.target.value })
@@ -133,7 +133,7 @@ export default function DonatePage() {
               type="number"
               min="1"
               placeholder="Donation Amount (₹) *"
-              className="w-full border rounded-xl p-3"
+              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white placeholder-gray-400"
               value={form.amount}
               onChange={(e) =>
                 setForm({ ...form, amount: e.target.value })
@@ -141,18 +141,18 @@ export default function DonatePage() {
             />
 
             <textarea
-  placeholder="Message (Optional)"
-  className="w-full border border-blue-200 rounded-xl p-3 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-  value={form.message}
-  onChange={(e) =>
-    setForm({ ...form, message: e.target.value })
-  }
-/>
+              placeholder="Message (Optional)"
+              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white placeholder-gray-400"
+              value={form.message}
+              onChange={(e) =>
+                setForm({ ...form, message: e.target.value })
+              }
+            />
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-blue-700 hover:bg-blue-800 text-white py-3 font-semibold transition"
+              className="w-full rounded-xl bg-yellow-500 hover:bg-yellow-600 text-black py-3 font-bold transition"
             >
               {loading ? "Processing..." : "Submit Donation"}
             </button>
