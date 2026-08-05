@@ -75,10 +75,8 @@ export default function DonatePage() {
 
         <DonateOptions />
 
-        <div className="mt-10 rounded-3xl bg-black shadow-xl border border-gray-700 p-8">
-
-          <h2 className="text-2xl font-semibold mb-6 text-white">
-            Donor Details
+        <div className="mt-10 rounded-3xl bg-white shadow-2xl border border-gray-200 p-8">
+           <h2 className="text-2xl font-bold mb-6 text-blue-900">            Donor Details
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -86,8 +84,7 @@ export default function DonatePage() {
             <input
               type="text"
               placeholder="Full Name *"
-              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white placeholder-gray-400"
-              value={form.name}
+             className="w-full rounded-xl p-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 outline-none"              value={form.name}
               onChange={(e) =>
                 setForm({ ...form, name: e.target.value })
               }
@@ -96,8 +93,7 @@ export default function DonatePage() {
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white placeholder-gray-400"
-              value={form.email}
+              className="w-full rounded-xl p-3 bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 outline-none"              value={form.email}
               onChange={(e) =>
                 setForm({ ...form, email: e.target.value })
               }
@@ -114,8 +110,8 @@ export default function DonatePage() {
             />
 
             <select
-              className="w-full rounded-xl p-3 bg-gray-900 border border-gray-600 text-white"
-              value={form.category}
+className="w-full rounded-xl p-3 bg-white border border-gray-300 text-gray-900 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 outline-none"              
+value={form.category}
               onChange={(e) =>
                 setForm({ ...form, category: e.target.value })
               }
@@ -150,13 +146,12 @@ export default function DonatePage() {
             />
 
             <button
-              type="submit"
-              disabled={loading}
-              className="w-full rounded-xl bg-yellow-500 hover:bg-yellow-600 text-black py-3 font-bold transition"
-            >
-              {loading ? "Processing..." : "Submit Donation"}
-            </button>
-
+  type="submit"
+  disabled={loading}
+  className="w-full rounded-xl bg-blue-700 hover:bg-blue-800 text-white py-3 font-bold transition duration-300 shadow-lg"
+>
+  {loading ? "Processing..." : "Proceed to Payment"}
+</button>
           </form>
 
         </div>
