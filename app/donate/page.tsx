@@ -141,13 +141,13 @@ export default function DonatePage() {
             />
 
             <textarea
-              placeholder="Message (Optional)"
-              className="w-full border rounded-xl p-3"
-              value={form.message}
-              onChange={(e) =>
-                setForm({ ...form, message: e.target.value })
-              }
-            />
+  placeholder="Message (Optional)"
+  className="w-full border border-blue-200 rounded-xl p-3 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  value={form.message}
+  onChange={(e) =>
+    setForm({ ...form, message: e.target.value })
+  }
+/>
 
             <button
               type="submit"
