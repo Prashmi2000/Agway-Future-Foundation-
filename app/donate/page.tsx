@@ -10,6 +10,7 @@ export default function DonatePage() {
     phone: "",
     category: "",
     amount: "",
+    message: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -47,6 +48,7 @@ export default function DonatePage() {
           phone: "",
           category: "",
           amount: "",
+          message: "",
         });
       } else {
         alert("Something went wrong. Please try again.");
@@ -135,6 +137,15 @@ export default function DonatePage() {
               value={form.amount}
               onChange={(e) =>
                 setForm({ ...form, amount: e.target.value })
+              }
+            />
+
+            <textarea
+              placeholder="Message (Optional)"
+              className="w-full border rounded-xl p-3"
+              value={form.message}
+              onChange={(e) =>
+                setForm({ ...form, message: e.target.value })
               }
             />
 
