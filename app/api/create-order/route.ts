@@ -10,16 +10,24 @@ export async function POST(req: Request) {
   try {
     const { amount } = await req.json();
 
+    if (!amount) {
+      return NextResponse.json(
+        { error: "Amount required" },
+        { status: 400 }
+      );
+    }
+
     const order = await razorpay.orders.create({
-      amount: amount * 100,
+      amount: Number(amount) * 100,
       currency: "INR",
-      receipt: `receipt_${Date.now()}`,
+      receipt: `agway_${Date.now()}`,
     });
 
     return NextResponse.json(order);
 
   } catch (error) {
-    console.error(error);
+    console.error("Razorpay Error:", error);
+
     return NextResponse.json(
       { error: "Order creation failed" },
       { status: 500 }

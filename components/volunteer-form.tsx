@@ -10,11 +10,38 @@ const inputClass =
 export function VolunteerForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle')
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setStatus('submitting')
-    // Simulated submission — connect to your backend or email service here.
-    setTimeout(() => setStatus('success'), 1100)
+setStatus('submitting')
+
+const formData = new FormData(e.currentTarget)
+
+const data = {
+  name: formData.get("name"),
+  phone: formData.get("phone"),
+  email: formData.get("email"),
+  city: formData.get("city"),
+  area: formData.get("area"),
+  message: formData.get("message"),
+}
+
+try {
+  const res = await fetch("/api/volunteer", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+
+  if (res.ok) {
+    setStatus("success")
+  } else {
+    setStatus("idle")
+  }
+} catch (error) {
+  setStatus("idle")
+}
   }
 
   if (status === 'success') {
